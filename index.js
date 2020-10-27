@@ -1,3 +1,2 @@
-import cipher from './cipher.js';
-
-console.log(cipher);
+let id= document.getElementById("criptografado");
+  id.textContent = ("Olá "+ texto +" Seu nome em Dothraki é " + chave);

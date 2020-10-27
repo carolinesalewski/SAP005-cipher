@@ -1,0 +1,41 @@
+.japensou{
+    font-family: cursive;
+    font-weight:bolder;
+    font-size:40px;
+
+}
+.cliqueabaixo{
+    font-family: cursive;
+    font-weight:bolder;
+    font-size:20px;
+}
+.bt {
+    border:5px solid #DEB887;
+    border-radius:4px;
+    display:inline-block;
+    cursor:pointer;
+    font-family:cursive;
+    font-weight:bolder;
+    font-size:15px;
+    padding:6px 10px;
+    text-decoration:none;
+        
+}
+.valorfinal{
+    font-family: cursive;
+    font-weight:bolder;
+    font-size:20px;
+}
+
+figure{
+    align-items: center;
+}
+
+.ca{
+    opacity:0.5;
+    -moz-opacity: 0.5;
+}
+
+.contentBox{
+    float: left;
+}
