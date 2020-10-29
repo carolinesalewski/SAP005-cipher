@@ -1,14 +1,15 @@
 .japensou{
     font-family: cursive;
     font-weight:bolder;
-    font-size:40px;
-
+    font-size:37px;
 }
+
 .cliqueabaixo{
     font-family: cursive;
     font-weight:bolder;
     font-size:20px;
 }
+
 .bt {
     border:5px solid #DEB887;
     border-radius:4px;
@@ -21,6 +22,7 @@
     text-decoration:none;
         
 }
+
 .valorfinal{
     font-family: cursive;
     font-weight:bolder;
@@ -34,8 +36,39 @@ figure{
 .ca{
     opacity:0.5;
     -moz-opacity: 0.5;
+     width:600px;
+     height:400px;
+     widows:90px;
+     height:60vh;
 }
 
 .contentBox{
-    float: left;
+    float:center;
+    position: absolute;
+    text-align: center;
+    background-color:#CDAA7D;
+    border-style: double;
+    border-width: medium;
+    padding: 20px, 20px, 20px, 40px;
+    margin-bottom:50%;
+}
+.bt2 {
+    border:5px solid #DEB887;
+    border-radius:4px;
+    display:inline-block;
+    cursor:pointer;
+    font-family:cursive;
+    font-weight:bolder;
+    font-size:15px;
+    padding:6px 10px;
+    text-decoration:none;
+        
+}
+.valorfinal2{
+    font-family: cursive;
+    font-weight:bolder;
+    font-size:20px;
+}
+.hmtl{
+    margin-bottom:30mm;
 }
