@@ -1,17 +1,69 @@
+const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const quantidadeLetrasAlfabeto = 26;
+let chave;
+let texto;
+let quantidadeDeCasas;
+let chaveNome;
+
 function criptografar(){
   
-  var chave = "";
-  let texto = prompt("Insira o seu primeiro nome");
-  let quantidadeDeCasas = prompt ("Insira o primeiro numero da sua idade");
-  const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  chave = "";
+
+  getTextoValidado();
+  getQuantidadeDeCasasValidadas();  
   
   for (let i = 0; i < texto.length; i++){
-      let resultado = alfabeto.search(texto.charAt(i).toUpperCase()) + parseInt(quantidadeDeCasas);
-      if (resultado>25){
-          resultado=resultado-24;
-      }
-    chave = chave + alfabeto.charAt(resultado);
+
+    let resultado = alfabeto.search(texto.charAt(i).toUpperCase()) + (parseInt(quantidadeDeCasas) % quantidadeLetrasAlfabeto);
+    
+    if (resultado > quantidadeLetrasAlfabeto){
+      resultado = resultado-25;
     }
-  let id = document.getElementById("criptografado");
-  id.textContent = ("Olá "+ texto +" Seu nome em Dothraki é" + chave);
+
+    chave = chave + alfabeto.charAt(resultado);
+  }
+
+  imprimeNomeCriptografado();
+}
+
+function getTextoValidado(){
+  texto = prompt("Insira o seu primeiro nome");
+
+  if(!/^([A-Za-z]+)$/.test(texto)){
+    alert("Insira seu nome, é permitido apenas letras!!");
+    getTextoValidado();
+  }
+}
+
+function getQuantidadeDeCasasValidadas(){
+  quantidadeDeCasas = prompt ("Insira um numero de 1 a 25");
+
+  if(!/^(\d{1,2})$/.test(quantidadeDeCasas)){
+    alert("Insira somente numeros de 1 a 25!!");
+    getQuantidadeDeCasasValidadas();
+  }
+}
+
+function imprimeNomeCriptografado(){
+  document.getElementById("criptografado").innerHTML = ("Olá "+ texto +" seu nome em Dothraki é <br>" + chave);
+}
+
+function descriptografar(){
+  chaveNome = "";
+  for (let i = 0; i < chave.length; i++){
+
+    let resultado = alfabeto.search(chave.charAt(i).toUpperCase()) - (parseInt(quantidadeDeCasas) % quantidadeLetrasAlfabeto);
+    
+    if (resultado > quantidadeLetrasAlfabeto){
+      resultado = resultado-25;
+    }
+
+    chaveNome = chaveNome + alfabeto.charAt(resultado);
+  }
+
+  imprimeNomeDescriptografado();
+}
+
+function imprimeNomeDescriptografado(){
+  document.getElementById("descriptografado").innerHTML=("Seu nome não dothraki é <br>" + chaveNome)
 }
