@@ -44,10 +44,6 @@ function getQuantidadeDeCasasValidadas(){
   }
 }
 
-function imprimeNomeCriptografado(){
-  document.getElementById("criptografado").innerHTML = ("Olá "+ texto +" seu nome em Dothraki é <br>" + chave);
-}
-
 function descriptografar(){
   chaveNome = "";
   for (let i = 0; i < chave.length; i++){
@@ -62,8 +58,4 @@ function descriptografar(){
   }
 
   imprimeNomeDescriptografado();
-}
-
-function imprimeNomeDescriptografado(){
-  document.getElementById("descriptografado").innerHTML=("Seu nome não dothraki é <br>" + chaveNome)
 }
