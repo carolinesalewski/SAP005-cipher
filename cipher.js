@@ -1,61 +1,43 @@
-const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const quantidadeLetrasAlfabeto = 26;
-let chave;
-let texto;
-let quantidadeDeCasas;
-let chaveNome;
+const cipher = {
 
-function criptografar(){
-  
-  chave = "";
+  encode: function(quantidadeDeCasas, texto){
 
-  getTextoValidado();
-  getQuantidadeDeCasasValidadas();  
-  
-  for (let i = 0; i < texto.length; i++){
-
-    let resultado = alfabeto.search(texto.charAt(i).toUpperCase()) + (parseInt(quantidadeDeCasas) % quantidadeLetrasAlfabeto);
+    const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const quantidadeLetrasAlfabeto = 26;
     
-    if (resultado > quantidadeLetrasAlfabeto){
-      resultado = resultado-25;
+    let chave = "";
+
+    for (let i = 0; i < texto.length; i++){
+
+      let resultado = alfabeto.search(texto.charAt(i).toUpperCase()) + (parseInt(quantidadeDeCasas) % quantidadeLetrasAlfabeto);
+      
+      if (resultado > quantidadeLetrasAlfabeto){
+        resultado = resultado-25;
+      }
+
+      chave = chave + alfabeto.charAt(resultado);
     }
 
-    chave = chave + alfabeto.charAt(resultado);
-  }
+    return chave;
+  },
+  decode:function(quantidadeDeCasas, chave){
+    const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const quantidadeLetrasAlfabeto = 26;
 
-  imprimeNomeCriptografado();
-}
+    let chaveNome = "";
+    for (let i = 0; i < chave.length; i++){
 
-function getTextoValidado(){
-  texto = prompt("Insira o seu primeiro nome");
+      let resultado = alfabeto.search(chave.charAt(i).toUpperCase()) - (parseInt(quantidadeDeCasas) % quantidadeLetrasAlfabeto);
+      
+      if (resultado > quantidadeLetrasAlfabeto){
+        resultado = resultado-25;
+      }
 
-  if(!/^([A-Za-z]+)$/.test(texto)){
-    alert("Insira seu nome, é permitido apenas letras!!");
-    getTextoValidado();
-  }
-}
-
-function getQuantidadeDeCasasValidadas(){
-  quantidadeDeCasas = prompt ("Insira um numero de 1 a 25");
-
-  if(!/^(\d{1,2})$/.test(quantidadeDeCasas)){
-    alert("Insira somente numeros de 1 a 25!!");
-    getQuantidadeDeCasasValidadas();
-  }
-}
-
-function descriptografar(){
-  chaveNome = "";
-  for (let i = 0; i < chave.length; i++){
-
-    let resultado = alfabeto.search(chave.charAt(i).toUpperCase()) - (parseInt(quantidadeDeCasas) % quantidadeLetrasAlfabeto);
-    
-    if (resultado > quantidadeLetrasAlfabeto){
-      resultado = resultado-25;
+      chaveNome = chaveNome + alfabeto.charAt(resultado);
     }
 
-    chaveNome = chaveNome + alfabeto.charAt(resultado);
+    return chaveNome;
   }
-
-  imprimeNomeDescriptografado();
 }
+
+export default cipher;
