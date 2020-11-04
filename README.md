@@ -18,6 +18,7 @@
 
 ## 1. Prefácio
 
+O projeto foi desenvolvido com a técnica de cifra de césar.
 Cifrar significa codificar. A [cifra de
 César](https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar) é um dos primeiros
 tipos de criptografias conhecidas na história. O imperador romano Júlio César
@@ -45,19 +46,13 @@ a cifra de Vigenère, e tem aplicação no sistema ROT13.
 
 ## 2. Resumo do projeto
 
-O que eu tenho que fazer exatamente? Neste projeto você criará a primeira
-aplicação web do _bootcamp_. Nela o usuário poderá cifrar e decrifrar um texto
-indicando a chave de deslocamento (_offset_).
+O projeto foi desenvolvido voltado para o entreterimento do usuário, uma bricadeira, onde a pessoa insere seu nome, e um numero qualquer de 1 a 25, e retorna um nome Dothrak, referência de uma śerie de televisão chamada Game of Thrones. 
+Game of Thrones é uma série de televisão norte-americana criada por David Benioff e D. B. Weiss, e baseada na série de livros A Song of Ice and Fire, de George R. R. Martin.
+Na série, existe um povo chamado Dothrak, são de uma cultura de guerreiros nômades em Essos(continente).
+Os Dothraki são pessoas grandes, possuem o cabelo preto, a pele em tons de cobre e olhos amendoados escuros . Possuem nomes fortes, como os personagens Khal Haro, Khal Qno, Khal loso e etc. O nome é sempre iniciado por Khal e um segundo nome, no caso, o segundo nome é que será feita a brincadeira, onde a pessoa insere seu nome, um numero qualquer de 1 a 25, e voltara um nome Dothraki usando como base seu proprio nome. O offset será o numero que a pessoa inserir que irá navegar no ABCdário e substituir as letras do seu nome de acordo com o offset inserido.
 
-O tema é livre. Você deve pensar em alguma situação de vida real em que seja
-necessário cifrar uma mensagem e pensar em como deve ser a experiência do
-usuário (tela, explicações, mensagens, cores, marca?, etc.). Algumas ideias de
-exemplo:
-
-* Mensagens secretas para alguma pessoa.
-* Ferramenta de mensagens internas de uma organização em uma zona de conflito.
-* Cifrar cartões de crédito.
-* Criar senhas seguras para email.
+Referência:
+https://wiki.geloefogo.com/index.php/Dothraki
 
 ## 3. Objetivos de aprendizagem
 
