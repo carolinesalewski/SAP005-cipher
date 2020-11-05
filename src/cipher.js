@@ -1,48 +1,48 @@
 const cipher = {
 
-  encode: function (quantidadeDeCasas, texto) {
+  encode: function (offset, text) {
 
-    const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let chave = "";
+    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let textEncoded = "";
 
-    if (!/^([A-Za-z]+)$/.test(texto) && (!/^(\d+)$/.test(quantidadeDeCasas) || quantidadeDeCasas == 0)) {
+    if (!/^([A-Za-z]+)$/.test(text) && (!/^(\d+)$/.test(offset) || offset == 0)) {
       throw new TypeError();
     }
 
-    for (let i = 0; i < texto.length; i++) {
+    for (let i = 0; i < text.length; i++) {
 
-      let resultado = alfabeto.search(texto.charAt(i).toUpperCase()) + (parseInt(quantidadeDeCasas) % alfabeto.length);
+      let result = alphabet.search(text.charAt(i).toUpperCase()) + (parseInt(offset) % alphabet.length);
 
-      if (resultado >= alfabeto.length) {
-        resultado = resultado - alfabeto.length;
+      if (result >= alphabet.length) {
+        result = result - alphabet.length;
       }
 
-      chave = chave + alfabeto.charAt(resultado);
+      textEncoded = textEncoded + alphabet.charAt(result);
     }
 
-    return chave;
+    return textEncoded;
   },
-  decode: function (quantidadeDeCasas, chave) {
-    const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  decode: function (offset, textEncoded) {
+    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     //HIJKLMNOPQRSTUVWXYZABCDEFG
-    let chaveNome = "";
+    let textDecoded = "";
 
-    if (!/^([A-Za-z]+)$/.test(chave) && (!/^(\d+)$/.test(quantidadeDeCasas) || quantidadeDeCasas == 0)) {
+    if (!/^([A-Za-z]+)$/.test(textEncoded) && (!/^(\d+)$/.test(offset) || offset == 0)) {
       throw new TypeError();
     }
 
-    for (let i = 0; i < chave.length; i++) {
+    for (let i = 0; i < textEncoded.length; i++) {
 
-      let resultado = alfabeto.search(chave.charAt(i).toUpperCase()) - (parseInt(quantidadeDeCasas) % alfabeto.length);
+      let result = alphabet.search(textEncoded.charAt(i).toUpperCase()) - (parseInt(offset) % alphabet.length);
 
-      if (resultado < 0) {
-        resultado = resultado + alfabeto.length;
+      if (result < 0) {
+        result = result + alphabet.length;
       }
 
-      chaveNome = chaveNome + alfabeto.charAt(resultado);
+      textDecoded = textDecoded + alphabet.charAt(result);
     }
 
-    return chaveNome;
+    return textDecoded;
   }
 }
 
