@@ -1,18 +1,20 @@
 const cipher = {
 
-  encode: function(quantidadeDeCasas, texto){
+  encode: function (quantidadeDeCasas, texto) {
 
     const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const quantidadeLetrasAlfabeto = 26;
-    
     let chave = "";
 
-    for (let i = 0; i < texto.length; i++){
+    if (!/^([A-Za-z]+)$/.test(texto) && (!/^(\d+)$/.test(quantidadeDeCasas) || quantidadeDeCasas == 0)) {
+      throw new TypeError();
+    }
 
-      let resultado = alfabeto.search(texto.charAt(i).toUpperCase()) + (parseInt(quantidadeDeCasas) % quantidadeLetrasAlfabeto);
-      
-      if (resultado > quantidadeLetrasAlfabeto){
-        resultado = resultado-25;
+    for (let i = 0; i < texto.length; i++) {
+
+      let resultado = alfabeto.search(texto.charAt(i).toUpperCase()) + (parseInt(quantidadeDeCasas) % alfabeto.length);
+
+      if (resultado >= alfabeto.length) {
+        resultado = resultado - alfabeto.length;
       }
 
       chave = chave + alfabeto.charAt(resultado);
@@ -20,17 +22,21 @@ const cipher = {
 
     return chave;
   },
-  decode:function(quantidadeDeCasas, chave){
+  decode: function (quantidadeDeCasas, chave) {
     const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const quantidadeLetrasAlfabeto = 26;
-
+    //HIJKLMNOPQRSTUVWXYZABCDEFG
     let chaveNome = "";
-    for (let i = 0; i < chave.length; i++){
 
-      let resultado = alfabeto.search(chave.charAt(i).toUpperCase()) - (parseInt(quantidadeDeCasas) % quantidadeLetrasAlfabeto);
-      
-      if (resultado > quantidadeLetrasAlfabeto){
-        resultado = resultado-25;
+    if (!/^([A-Za-z]+)$/.test(chave) && (!/^(\d+)$/.test(quantidadeDeCasas) || quantidadeDeCasas == 0)) {
+      throw new TypeError();
+    }
+
+    for (let i = 0; i < chave.length; i++) {
+
+      let resultado = alfabeto.search(chave.charAt(i).toUpperCase()) - (parseInt(quantidadeDeCasas) % alfabeto.length);
+
+      if (resultado < 0) {
+        resultado = resultado + alfabeto.length;
       }
 
       chaveNome = chaveNome + alfabeto.charAt(resultado);
