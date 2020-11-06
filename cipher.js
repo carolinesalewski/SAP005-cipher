@@ -17,6 +17,8 @@ const cipher = {
       }
 
       let result = alphabet.search(text.charAt(i).toUpperCase()) + (parseInt(offset) % alphabet.length);
+      //o charAt vai pegar a letra da posição indicada pelo loop no texto inserido, o alphabet.search vai buscar a letra indicada e vai transformar em letra maiuscula. O parseInt vai transformar em numero inteiro a quantidade de offset indicada e ira fazer o módulo da quantidade de letras do alfabeto. ex: offset: 2 text: carol. CharAt pegara posição 0 (c) , transformou em maiuscula (C) e vai buscar pelo alphabet search a posição indicada da palavra(c esta na posição 2 do alfabeto),pegou a quantidade de offset(2) e fez modulo de 26 que da 2. 2+2 = 4
+      //result agora é = 4 ou seja, a posição 4 do alfabeto.
 
       if (result >= alphabet.length) {
         result = result - alphabet.length;
