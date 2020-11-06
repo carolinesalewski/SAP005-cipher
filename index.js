@@ -10,30 +10,23 @@ button.addEventListener("click", eventEncode);
 const button2 = document.getElementById("bt2");
 button2.addEventListener("click", eventDecode);
 
+const button3 = document.getElementById("reset");
+button3.addEventListener("click", reset);
+
 function printEncodedName(text, textEncoded) {
-    document.getElementById("criptografado").innerHTML = ("Olá " + text + " seu nome em Dothraki é <br>" + "KHAL " + textEncoded);
+    document.getElementById("criptografado").innerHTML = ("Sua palavra criptografada é<br>" + textEncoded);
 }
 function printDecodedName(textDecoded) {
-    document.getElementById("descriptografado").innerHTML = ("Seu nome não Dothraki é <br>" + textDecoded)
+    document.getElementById("descriptografado").innerHTML = ("Sua palavra descriptografada é <br>" + textDecoded)
 }
 
 function getValidText() {
-    text = prompt("Insira o seu primeiro nome");
-
-    // if(!/^([A-Za-z]+)$/.test(text)){
-    //   alert("Insira seu nome, é permitido apenas letras!!");
-    //   getValidText();
-    // } 
+    text = prompt("Insira aqui a sua palavra");
     return text;
 }
 
 function getOffsetValidated() {
-    let offset1 = prompt("Insira sua idade");
-
-    // if(!/^(\d{1,2})$/.test(offset1)){
-    //   alert("Insira somente numeros de 1 a 25!!");
-    //   getOffsetValidated();
-    // } 
+    let offset1 = prompt("Insira aqui um numero, o mesmo irá ajudar a criptografar sua frase");
     offset = parseInt(offset1);
 }
 
@@ -54,3 +47,8 @@ function eventDecode(event) {
     printDecodedName(decodeName);
 }
 
+function reset(event) {
+    event.preventDefault();
+    document.getElementById("criptografado").innerHTML = ("");
+    document.getElementById("descriptografado").innerHTML = ("");
+}
