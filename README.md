@@ -20,7 +20,6 @@ A ideia do projeto, era desenvolver um programa que dê ao usuário um campo de 
 
 
 ## 3. Objetivo e modo de uso
-
 O Objetivo do projeto é cifrar e decifrar uma frase inserida pelo usuário.
 Em primeiro lugar, o usuário irá clicar no botão "Cifrar", onde abrirá um campo para o mesmo inserir a palavra e o numero conforme abaixo.
 ![Screenshot](screenshot1.png)
@@ -32,7 +31,7 @@ Para limprar as informações e começar novamente, basta clicar no botão "limp
 ![Screenshot](screenshot5.png)
 
 ## 4. Tema
-Dark é uma premiada websérie alemã de drama, suspense e ficção científica, onde a viagem no tempo é o tema principal da série.A história se desenvolve, principalmente, em três períodos diferentes: 1953, 1986 e 2019-2020 e você acompanha e ve os personagens em várias fases da vida simultâneamente, geralmente em três versões: criança, adulto e idoso. Os viajantes comunicam-se inclusive consigo mesmo em diferentes épocas.
+Dark é uma premiada websérie alemã de drama, suspense e ficção científica, onde a viagem no tempo é o tema principal da série. A história se desenvolve, principalmente, em três períodos diferentes: 1953, 1986 e 2019-2020 e você acompanha e ve os personagens em várias fases da vida simultâneamente, geralmente em três versões: criança, adulto e idoso. Os viajantes comunicam-se inclusive consigo mesmo em diferentes épocas.
 
 Bibliografia:
 https://entretenimento.uol.com.br/noticias/redacao/2020/07/03/o-guia-para-entender-dark-e-conseguir-conversar-com-seus-amigos.htm
@@ -44,17 +43,26 @@ https://entretenimento.uol.com.br/noticias/redacao/2020/07/03/o-guia-para-entend
 
 - Sprint 1
 :heavy_check_mark: Estudo da cifra de cézar
+
 :heavy_check_mark: Estudo de funções no JS, manipulação do DOM e strings, buscar informações sobre CSS
+
 :heavy_check_mark: Definir um tema
+
 :heavy_check_mark: Escrever o processo de lógica
+
 :heavy_check_mark: Montar estrutura HTML
 
 - Sprint 2
 :heavy_check_mark: Iniciar a lógica dentro do código declarando variáveis e montando as funções
+
 :heavy_check_mark: Trabalhar na manipulação do DOM
+
 :heavy_check_mark: Iniciar o CSS
+
 :heavy_check_mark: Realizar testes NPM
+
 :heavy_check_mark: Fazer testes verificando se há bugs e problemas de função
+
 :heavy_check_mark: Dar review nas regras do HTML semântico, aprimorar o CSS.
 
 
@@ -63,34 +71,3 @@ https://entretenimento.uol.com.br/noticias/redacao/2020/07/03/o-guia-para-entend
 
 
 
-
-
-Essa seção é para te ajudar a ter um controle do que você precisa completar.
-
-### Parte Obrigatória
-
-* [ ] `README.md` adicionar informação sobre o processo e decisões do desenho.
-* [ ] `README.md` explicar claramente quem são os usuários e as suas relações
-  com o produto.
-* [ ] `README.md` explicar claramente como o produto soluciona os
-  problemas/necessidades dos usuários.
-* [ ] Usar VanillaJS.
-* [ ] **Não** usar `this`.
-* [ ] Implementar `cipher.encode`.
-* [ ] Implementar `cipher.decode`.
-* [ ] Passar o linter com a configuração definida.
-* [ ] Passar as provas unitárias.
-* [ ] Testes unitários cubrindo 70% dos _statements_, _functions_ e _lines_, e
-  no mínimo 50% das _branches_.
-* [ ] Interface que permita escolher o `offset` (chave de deslocamento) usava
-  para cifrar/decifrar.
-* [ ] Interface que permita escrever um texto para ser cifrado.
-* [ ] Interface que mostre o resultado da cifra corretamente.
-* [ ] Interface que permita escrever um texto para ser decifrado.
-* [ ] Interface que mostre o resultado decifrado corretamente.
-
-### Parte Opcional: "Hacker edition"
-
-* [ ] Cifrar/decifrar minúsculas.
-* [ ] Cifrar/decifrar _outros_ caractéres (espações, pontuação, `ç`, `á`, ...).
-* [ ] Permitir usar `offset` negativo.
