@@ -14,19 +14,19 @@ const button3 = document.getElementById("reset");
 button3.addEventListener("click", reset);
 
 function printEncodedName(text, textEncoded) {
-    document.getElementById("encrypted").innerHTML = ("Sua palavra criptografada é<br>" + textEncoded);
+    document.getElementById("encrypted").innerHTML = ("Sua frase criptografada é<br>" + textEncoded);
 }
 function printDecodedName(textDecoded) {
-    document.getElementById("decrypted").innerHTML = ("Sua palavra descriptografada é <br>" + textDecoded)
+    document.getElementById("decrypted").innerHTML = ("Sua frase descriptografada é <br>" + textDecoded)
 }
 
 function getValidText() {
-    text = prompt("Insira aqui a sua palavra");
+    text = prompt("Insira aqui a sua mensagem");
     return text;
 }
 
 function getOffsetValidated() {
-    let offset1 = prompt("Insira aqui um numero, o mesmo irá ajudar a criptografar sua frase");
+    let offset1 = prompt("Insira aqui um numero, o mesmo irá ajudar a criptografar sua mensagem");
     offset = parseInt(offset1);
 }
 
