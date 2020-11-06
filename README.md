@@ -38,26 +38,17 @@ A ideia do projeto, era desenvolver um programa que dê ao usuário um campo de 
 ## 3. Objetivo e modo de uso
 
 O Objetivo do projeto é cifrar e decifrar uma frase inserida pelo usuário.
-Em primeiro lugar, o usuário irá clicar no botão "Cifrar", onde abrirá um campo para o mesmo inserir a palavra e o numero conforme abaixo.
 
-![Screenshot](botao1.png)
+:arrow_right: Em primeiro lugar, o usuário irá clicar no botão "Cifrar", onde abrirá um campo para o mesmo inserir a palavra e o numero. Logo abaixo, aparecerá sua mensagem criptografada!
 
-![Screenshot](insirafrase.png)
+:arrow_right: Feito isso, é só clicar no botão "Decifrar" que sua mensagem descriptografada aparecerá logo abaixo da criptografada.
 
-![Screenshot](insiranumero.png)
+:arrow_right: Para limprar as informações e começar novamente, basta clicar no botão "limpar".
 
-Pronto! Sua palavra cifrada irá aparecer. Feito isso, é só clicar no botão "Decifrar" que sua mensagem descriptografada aparecerá logo abaixo.
-
-![Screenshot](frasecriptografada.png)
-
-![Screenshot](frasedescriptografada.png)
-
-Para limprar as informações e começar novamente, basta clicar no botão "limpar".
-![Screenshot](botao3.png)
 
 ## 4. Tema
 
-Dark é uma premiada websérie alemã de drama, suspense e ficção científica, onde a viagem no tempo é o tema principal da série. A história se desenvolve, principalmente, em três períodos diferentes: 1953, 1986 e 2019-2020 e você acompanha e ve os personagens em várias fases da vida simultâneamente, geralmente em três versões: criança, adulto e idoso. Os viajantes comunicam-se inclusive consigo mesmo em diferentes épocas.
+Foi inspirado numa série de televisão chamada Dark é uma premiada websérie alemã de drama, suspense e ficção científica, onde a viagem no tempo é o tema principal da série. A história se desenvolve, principalmente, em três períodos diferentes: 1953, 1986 e 2019-2020 e você acompanha e ve os personagens em várias fases da vida simultâneamente, geralmente em três versões: criança, adulto e idoso. Os viajantes comunicam-se inclusive consigo mesmo em diferentes épocas.
 
 Bibliografia:
 https://entretenimento.uol.com.br/noticias/redacao/2020/07/03/o-guia-para-entender-dark-e-conseguir-conversar-com-seus-amigos.htm
