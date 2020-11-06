@@ -2,11 +2,11 @@
 
 ## Índice
 
-* [1. Introdução](#1-Introducao)
-* [2. ferramentas de uso](#2-Ferramentas-de-uso)
-* [3. Objetivo e modo de uso](#3-Objetivos-de-aprendizagem)
+* [1. Introdução](#1-Introdução)
+* [2. Ferramentas de uso](#2-Ferramentas-de-uso)
+* [3. Objetivo e modo de uso](#3-Objetivo-e-modo-de-uso)
 * [4. Tema ](#4-Tema)
-* [5. Usuário ](#5-Usuario)
+* [5. Usuário ](#5-Usuário)
 * [6. Planning do processo de desenvolvimento](#6-Planning-do-processo-de-desenvolvimento)
 * [7. Resultado](#7-Resultado)
 
