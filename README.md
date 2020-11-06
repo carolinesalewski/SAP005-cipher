@@ -41,11 +41,17 @@ O Objetivo do projeto é cifrar e decifrar uma frase inserida pelo usuário.
 Em primeiro lugar, o usuário irá clicar no botão "Cifrar", onde abrirá um campo para o mesmo inserir a palavra e o numero conforme abaixo.
 
 ![Screenshot](botao1.png)
+
 ![Screenshot](insirafrase.png)
+
 ![Screenshot](insiranumero.png)
+
 Pronto! Sua palavra cifrada irá aparecer. Feito isso, é só clicar no botão "Decifrar" que sua mensagem descriptografada aparecerá logo abaixo.
+
 ![Screenshot](frasecriptografada.png)
+
 ![Screenshot](frasedescriptografada.png)
+
 Para limprar as informações e começar novamente, basta clicar no botão "limpar".
 ![Screenshot](botao3.png)
 
@@ -92,6 +98,6 @@ https://entretenimento.uol.com.br/noticias/redacao/2020/07/03/o-guia-para-entend
 
 ## 7. Resultado
 
-![Alt Text](gravacao)
+![Alt Text](gravacao.gif)
 
 
