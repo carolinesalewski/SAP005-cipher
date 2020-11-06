@@ -14,10 +14,10 @@ const button3 = document.getElementById("reset");
 button3.addEventListener("click", reset);
 
 function printEncodedName(text, textEncoded) {
-    document.getElementById("criptografado").innerHTML = ("Sua palavra criptografada é<br>" + textEncoded);
+    document.getElementById("encrypted").innerHTML = ("Sua palavra criptografada é<br>" + textEncoded);
 }
 function printDecodedName(textDecoded) {
-    document.getElementById("descriptografado").innerHTML = ("Sua palavra descriptografada é <br>" + textDecoded)
+    document.getElementById("decrypted").innerHTML = ("Sua palavra descriptografada é <br>" + textDecoded)
 }
 
 function getValidText() {
@@ -49,6 +49,6 @@ function eventDecode(event) {
 
 function reset(event) {
     event.preventDefault();
-    document.getElementById("criptografado").innerHTML = ("");
-    document.getElementById("descriptografado").innerHTML = ("");
+    document.getElementById("encrypted").innerHTML = ("");
+    document.getElementById("decrypted").innerHTML = ("");
 }
